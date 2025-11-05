@@ -17,13 +17,12 @@ def driver():
 def test_registration(driver):
     registration_page = RegistrationPage(driver)
     registration_page.fill_form(
-        first_name="Иван",
-        last_name="Петров",
+        first_name="Алина",
+        last_name="Фахрутдинова",
         address="Ленина, 55-3",
         email="test@skypro.com",
-        phone="+7985899998787",
         zip_code="",
-        city="Москва",
+        city="Казань",
         country="Россия",
         job_position="QA",
         company="SkyPro"
