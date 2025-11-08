@@ -34,8 +34,9 @@ class CalculatorPage:
 
     def get_result_text(self):
         # Ожидаем появление элемента "screen" и возвращаем его текст
-        result_element = WebDriverWait(self.driver, 46).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div.screen"))
-        )
-        return result_element.text
+       def get_result(self):
+            element = WebDriverWait(driver, 60).until(
+                EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15")
+            )
+            res = driver.find_element(By.CSS_SELECTOR, ".screen").text
     
